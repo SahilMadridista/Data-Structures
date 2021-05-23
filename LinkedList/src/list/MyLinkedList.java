@@ -79,6 +79,10 @@ public class MyLinkedList {
 			int count = 0;
 			Node temp = head;
 			while(temp != null) {
+				if(count == index) {
+					System.out.println(temp.data);
+					break;
+				}
 				count = count + 1;
 				temp = temp.next;
 				if(count == index) {
