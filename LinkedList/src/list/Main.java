@@ -6,15 +6,15 @@ public class Main {
 
 		MyLinkedList list = new MyLinkedList();
 		
-		for(int i=0;i<8;i++) {
-			list.addData(i);
-		}
-
-		list.clear();
-		System.out.println(list.size());
-		list.print();
+		list.addData(3);
+		list.addData(1);
+		list.addData(9);
+		list.addData(7);
 		
-		// HIIIIIIIIIIIIIII
+		list.clear();
+
+		list.get(4);
+		
 		
 	}
 	

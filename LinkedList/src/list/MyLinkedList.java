@@ -4,6 +4,8 @@ public class MyLinkedList {
 	
 	Node head;
 	
+	// Add method.
+	
 	void addData(int data) {
 		Node toAdd = new Node(data);
 		
@@ -21,9 +23,13 @@ public class MyLinkedList {
 		
 	}
 	
+	// Checking whether the list is empty.
+	
 	boolean isEmpty() {
 		return head == null;
 	}
+	
+	// Print the list method.
 	
 	void print() {
 		Node temp = head;
@@ -38,6 +44,8 @@ public class MyLinkedList {
 		
 	}
 	
+	// Getting size of the list method
+	
 	int size() {
 		int count = 0;
 		Node temp = head;
@@ -48,6 +56,8 @@ public class MyLinkedList {
 		return count;
 	}
 	
+	// Deleting / Clearing the list method
+	
 	void clear() {
 		
 		while(head != null) {
@@ -55,6 +65,30 @@ public class MyLinkedList {
 		}
 	}
 	
+	// Getting value from index number
+	
+	void get(int index) {
+		
+		if(isEmpty()) {
+			System.out.println("List is empty, Can't get anything.");
+		}
+		else if(index+1>size()) {
+			System.out.println("Index value given is greater than list size.");
+		}
+		else {
+			int count = 0;
+			Node temp = head;
+			while(temp != null) {
+				count = count + 1;
+				temp = temp.next;
+				if(count == index) {
+					System.out.println(temp.data);
+				}
+			}
+		}
+	}
+	
+	// Node class
 	
 	static class Node{
 		int data;
