@@ -10,7 +10,7 @@ public class Main {
 			list.addData(i);
 		}
 		
-		list.set(8, 5);
+		list.removeFromIndex(6);
 		list.print();
 		
 		

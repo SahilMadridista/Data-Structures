@@ -88,6 +88,8 @@ public class MyLinkedList {
 			}
 		}
 	}
+
+	// Set value at specific index
 	
 	void set(int index, int value) {
 		if(isEmpty()) {
@@ -109,6 +111,31 @@ public class MyLinkedList {
 			}
 		}
 	}
+	
+	// Remove value from specific index
+	
+	void removeFromIndex(int index) {
+		
+		if(index==0) {
+			head=head.next;
+		}
+		else if(index+1>size()) {
+			System.out.println("Index value given is greater than list size.");
+		}
+		else {
+			
+			Node temp = head;
+            for (int i = 0; i < index - 1; i++) {
+                temp = temp.next;
+            }
+            
+            temp.next = temp.next.next;
+            
+            // values:  1   2   3   4   5 (to be removed)   6   7   8   9
+            // index:   0   1   2   3   4                   5   6   7   8
+		}
+	}
+	
 	
 	// Node class
 	
