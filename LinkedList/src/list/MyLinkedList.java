@@ -85,9 +85,6 @@ public class MyLinkedList {
 				}
 				count = count + 1;
 				temp = temp.next;
-				if(count == index) {
-					System.out.println(temp.data);
-				}
 			}
 		}
 	}
