@@ -1,4 +1,4 @@
-package list;
+package singlelinkedlist;
 
 public class MyLinkedList {
 	
@@ -70,7 +70,7 @@ public class MyLinkedList {
 	void get(int index) {
 		
 		if(isEmpty()) {
-			System.out.println("List is empty, Can't get anything.");
+			System.out.println("List is empty, Can't get any value.");
 		}
 		else if(index+1>size()) {
 			System.out.println("Index value given is greater than list size.");
@@ -81,6 +81,27 @@ public class MyLinkedList {
 			while(temp != null) {
 				if(count == index) {
 					System.out.println(temp.data);
+					break;
+				}
+				count = count + 1;
+				temp = temp.next;
+			}
+		}
+	}
+	
+	void set(int index, int value) {
+		if(isEmpty()) {
+			System.out.println("List is empty, Can't set any value.");
+		}
+		else if(index+1>size()) {
+			System.out.println("Index value given is greater than list size.");
+		}
+		else {
+			int count = 0;
+			Node temp = head;
+			while(temp != null) {
+				if(count == index) {
+					temp.data = value;
 					break;
 				}
 				count = count + 1;
