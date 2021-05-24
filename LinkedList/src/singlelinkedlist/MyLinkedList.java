@@ -131,8 +131,40 @@ public class MyLinkedList {
             
             temp.next = temp.next.next;
             
-//             values:  1   2   3   4   5 (to be removed)   6   7   8   9
-//             index:   0   1   2   3   4                   5   6   7   8
+//             values:  0   1   2   3   4   5   6   7   8   9   10
+//             index:   0   1   2   3   4   5   6   7   8   9   10
+		}
+	}
+	
+	// adding element at specific index
+	
+	void add(int index, int value) {
+		
+		Node temp = new Node(value);
+		if(index==0) {		
+	        temp.data = value;
+	        temp.next = head;
+	        head = temp;
+		}
+		else if(index+1>size()) {
+			System.out.println("Index value given is greater than list size.");
+		}
+		else {
+			
+			Node tempNode = head;
+			Node tempNode2 = head.next;
+			int count=0;
+			while(/* tempNode!=null || */ tempNode2 != null) {
+				count++;
+				if(count>=index) {
+					break;
+				}
+				tempNode = tempNode2;
+				tempNode2=tempNode2.next;
+			}
+			tempNode.next = temp;
+			temp.next = tempNode2;			
+			
 		}
 	}
 	
