@@ -6,11 +6,11 @@ public class Main {
 
 		MyLinkedList list = new MyLinkedList();
 		
-		for(int i = 1;i<10;i++) {
+		for(int i = 1;i<=10;i++) {
 			list.addData(i);
 		}
 		
-		list.removeFromIndex(6);
+		list.removeFromIndex(0);
 		list.print();
 		
 		
