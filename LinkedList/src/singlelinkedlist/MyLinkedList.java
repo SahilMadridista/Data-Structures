@@ -81,12 +81,12 @@ public class MyLinkedList {
 			while(temp != null) {
 				if(count == index) {
 					System.out.println(temp.data);
-					break;
 				}
 				count = count + 1;
 				temp = temp.next;
 			}
 		}
+		
 	}
 
 	// Set value at specific index
@@ -185,20 +185,20 @@ public class MyLinkedList {
 	// Reverse the list
 	
 	void reverse() {
-		Node temp = head;
-		Node temp2 = head;
 		
-		while(temp.next!=null) {
-			temp = temp.next;
-		}
-
-		while(temp2 == temp) {
-			temp.next = temp2;
-			temp2 = temp2.next;
-			System.out.print(temp.data + " ");
+		Node curr = head;
+		Node prev = null;
+		Node next = null;
+		
+		while(curr!=null) {
+			next=curr.next;
+			curr.next = prev;
+			prev = curr;
+			curr = next;
 		}
 		
-	}
+		head = prev;
+	} 
 	
 	// indexOf - Method to get the index value of an element
 	
@@ -206,7 +206,8 @@ public class MyLinkedList {
 		if(isEmpty()) {
 			System.out.println("Empty list.");
 			return -1;
-		}else {
+		}
+		else {
 			int count = 0;
 			Node tempNode = head;
 			while(tempNode != null) {
@@ -222,7 +223,6 @@ public class MyLinkedList {
 	}
 	
 
-	
 	// Node class
 	
 	static class Node{
