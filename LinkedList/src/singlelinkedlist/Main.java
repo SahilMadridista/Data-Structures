@@ -6,12 +6,11 @@ public class Main {
 
 		MyLinkedList list = new MyLinkedList();
 		
-		for(int i = 0;i<=10;i++) {
+		for(int i = 1;i<=10;i++) {
 			list.addData(i);
 		}
-		
-		list.sum();
-		list.print();
+
+		System.out.println(list.indexOf(10));
 		
 		
 	}

@@ -182,6 +182,46 @@ public class MyLinkedList {
 		}
 	}
 	
+	// Reverse the list
+	
+	void reverse() {
+		Node temp = head;
+		Node temp2 = head;
+		
+		while(temp.next!=null) {
+			temp = temp.next;
+		}
+
+		while(temp2 == temp) {
+			temp.next = temp2;
+			temp2 = temp2.next;
+			System.out.print(temp.data + " ");
+		}
+		
+	}
+	
+	// indexOf - Method to get the index value of an element
+	
+	int indexOf(int value) {
+		if(isEmpty()) {
+			System.out.println("Empty list.");
+			return -1;
+		}else {
+			int count = 0;
+			Node tempNode = head;
+			while(tempNode != null) {
+				if(tempNode.data == value) {
+					return count;
+				}
+				count++;
+				tempNode = tempNode.next;
+			}
+			return -1;
+			
+		}
+	}
+	
+
 	
 	// Node class
 	
