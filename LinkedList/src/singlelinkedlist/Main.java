@@ -10,7 +10,7 @@ public class Main {
 			list.addData(i);
 		}
 		
-		list.add(3, 12);
+		list.sum();
 		list.print();
 		
 		

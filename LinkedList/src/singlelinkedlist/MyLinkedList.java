@@ -168,6 +168,20 @@ public class MyLinkedList {
 		}
 	}
 	
+	void sum() {
+		if(isEmpty()) {
+			System.out.println("List is empty.");
+		}else {
+			int sum = 0;
+			Node tempNode = head;
+			while(tempNode != null) {
+				sum = sum + tempNode.data;
+				tempNode = tempNode.next;
+			}
+			System.out.println("Sum is: " + sum);
+		}
+	}
+	
 	
 	// Node class
 	
