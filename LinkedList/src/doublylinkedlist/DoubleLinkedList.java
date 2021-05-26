@@ -63,8 +63,61 @@ public class DoubleLinkedList {
 	void print() {
 		Node temp = head;
 		while(temp != null) {
-			System.err.print(temp.data + " ");
+			System.out.print(temp.data + " ");
 			temp = temp.next;
+		}
+	}
+	
+	// Printing the sum
+	
+	int sum() {
+		if(isEmpty()) {
+			System.out.println("List is empty.");
+		}
+		else {
+			int sum = 0;
+			Node tempNode = head;
+			while(tempNode != null) {
+				sum = sum + tempNode.data;
+				tempNode = tempNode.next;
+			}
+			return sum;
+		}
+		return 0;
+	}
+	
+	// Adding node anywhere
+	
+	void add(int index, int data) {
+		
+		if(index==0) {
+			Node newNode = new Node(null,data,head);
+			head.previous = newNode;
+			head = newNode;
+		}
+		else if(index+1>size()) {
+			System.out.println("Index value given is greater than list size.");
+		}
+		else {
+			Node newNode = new Node(data);
+			Node temp = head;
+			Node temp2 = head.next;
+			int count = 0;
+			while(temp2.next!=null) {
+				count++;
+				if(count>=index) {
+					break;
+				}
+				temp = temp2;
+				temp2 = temp2.next;
+			}
+			
+			temp.next = newNode;
+			newNode.previous = temp;
+
+			newNode.next = temp2;
+			temp2.previous = newNode;
+					
 		}
 	}
 	
