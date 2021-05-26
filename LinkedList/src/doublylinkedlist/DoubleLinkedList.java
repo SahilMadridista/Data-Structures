@@ -1,6 +1,5 @@
 package doublylinkedlist;
 
-
 public class DoubleLinkedList {
 	
 	private Node head;
@@ -120,6 +119,66 @@ public class DoubleLinkedList {
 					
 		}
 	}
+	
+	// Getting the value
+	
+	int get(int index) {
+		
+		if(isEmpty()) {
+			System.out.println("List is empty, Can't get any value.");
+		}
+		else if(index+1>size()) {
+			System.out.println("Index value given is greater than list size.");
+		}
+		else {
+			int count = 0;
+			Node temp = head;
+			while(temp != null) {
+				if(count == index) {
+					return temp.data;
+				}
+				count = count + 1;
+				temp = temp.next;
+			}
+		}
+		
+		return-1;
+	}
+	
+	// Delete one node from front
+	
+	void deleteFromFront() {
+		head = head.next;
+	}
+	
+	// Delete one node from back
+	
+	void deleteFromBack() {
+		Node temp = head;
+		while(temp.next.next != null) {
+			temp = temp.next;
+		}
+		temp.next = null;
+		
+	}
+	
+	// Delete from specific position
+	
+	void delete(int index) {
+		if(index+1>size()) {
+			System.out.println("Index value given is greater than list size.");
+		}
+		else {
+			Node temp = head;
+            for (int i = 0; i < index - 1; i++) {
+                temp = temp.next;
+            }
+            
+            temp.next = temp.next.next;
+		}
+	}
+	
+	
 	
 	// Node class
 	
