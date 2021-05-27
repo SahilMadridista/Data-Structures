@@ -57,6 +57,29 @@ public class DoubleLinkedList {
 		return count;
 	}
 	
+	// Set method
+	
+	void set(int index, int value) {
+		if(isEmpty()) {
+			System.out.println("List is empty, Can't set any value.");
+		}
+		else if(index+1>size()) {
+			System.out.println("Index value given is greater than list size.");
+		}
+		else {
+			int count = 0;
+			Node temp = head;
+			while(temp != null) {
+				if(count == index) {
+					temp.data = value;
+					break;
+				}
+				count = count + 1;
+				temp = temp.next;
+			}
+		}
+	}
+	
 	// Printing the list
 	
 	void print() {
@@ -178,6 +201,24 @@ public class DoubleLinkedList {
 		}
 	}
 	
+	// Reverse the list
+	
+	void reverse() {
+		
+		Node curr = head;
+		Node prev = null;
+		Node next = null;
+		
+		while(curr!=null) {
+			next=curr.next;
+			curr.next = prev;
+			prev = curr;
+			curr = next;
+		}
+		
+		head = prev;
+		
+	}
 	
 	
 	// Node class

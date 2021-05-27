@@ -10,8 +10,9 @@ public class Main {
 		
 		list.print();
 		System.out.println("\n");
-		list.delete(2);
-		System.out.println("\n");
+
+		list.reverse();
+		
 		list.print();
 		
 	}
