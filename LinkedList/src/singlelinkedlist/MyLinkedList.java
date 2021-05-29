@@ -81,6 +81,7 @@ public class MyLinkedList {
 			while(temp != null) {
 				if(count == index) {
 					System.out.println(temp.data);
+					break;
 				}
 				count = count + 1;
 				temp = temp.next;

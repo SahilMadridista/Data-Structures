@@ -6,12 +6,13 @@ public class Main {
 		
 		CircularLinkedList list = new CircularLinkedList();
 		
-		for(int i = 2;i<15;i=i+2) {
+		for(int i = 0; i<22;i+=3) {
 			list.addNode(i);
 		}
 		
 		list.print();
-		
+		System.out.println("\nSize is : " + list.size());
+		list.get(0);
 		
 	}
 	
