@@ -10,6 +10,8 @@ public class Main {
 			list.addData(i);
 		}
 		
+		list.print();
+		
 	}
 	
 }
