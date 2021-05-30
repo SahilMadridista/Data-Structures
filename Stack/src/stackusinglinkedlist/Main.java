@@ -2,7 +2,7 @@ package stackusinglinkedlist;
 
 public class Main {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		
 		MyStack myStack = new MyStack();
 		

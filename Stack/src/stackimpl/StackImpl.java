@@ -11,10 +11,10 @@ public class StackImpl {
         head = temp;
 	}
 	
-	int pop() {
+	int pop() throws Exception {
 		
 		if(isEmpty()) {
-			System.out.println("Stack is empty.");
+			throw new Exception("Can not pop from empty stack");
 		}
 		else if(head.next == null) {
 			Node toPop = head;
@@ -27,19 +27,17 @@ public class StackImpl {
 			return toPop.data;
 		}
 		
-		return 0;
 	}
 	
-	int peek() {
+	int peek() throws Exception {
 		
 		if(isEmpty()) {
-			System.out.println("Stack is empty.");
+			throw new Exception("Can not peek from empty stack");
 		}
 		else {
 			return head.data;
 		}
 		
-		return 0;
 	}
 	
 	void print() {

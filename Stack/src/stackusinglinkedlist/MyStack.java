@@ -21,12 +21,12 @@ public class MyStack {
 		temp.next = toAdd;
 	}
 	
-	int pop() {
+	int pop() throws Exception {
 		
 		Node temp = head;
 		
 		if(isEmpty()) {
-			System.out.println("Stack empty already.");
+			throw new Exception("Can not pop from empty stack");
 		}
 		else if(head.next == null) {
 			Node toPop = head;
@@ -45,14 +45,13 @@ public class MyStack {
 			return toPop.data;
 		}
 		
-		return 0;
 			
 	}
 	
-	int peek() {
+	int peek() throws Exception {
 		
 		if(isEmpty()) {
-			System.out.println("Stack is empty.");
+			throw new Exception("Can not peek from empty stack");
 		}
 		else {
 			Node temp = head;
@@ -63,8 +62,6 @@ public class MyStack {
 			
 			return temp.data;
 		}
-		
-		return 0;
 		
 	}
 	
