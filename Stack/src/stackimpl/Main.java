@@ -6,6 +6,10 @@ public class Main {
 		
 		StackImpl s = new StackImpl();
 		
+		s.push(12);
+		s.push(1);
+		s.push(7);
+		s.push(20);
 		
 		s.print();
 		System.out.println("");
