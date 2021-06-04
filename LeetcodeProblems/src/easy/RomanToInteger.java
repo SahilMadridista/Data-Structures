@@ -17,7 +17,7 @@ public class RomanToInteger {
 		romanMap.put('D', 500);
 		romanMap.put('M', 1000);
 
-		String str = "IX"; // value is 29
+		String str = "XXIX"; // value is 29
 		
 		int value = 0;
 		
