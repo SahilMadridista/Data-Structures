@@ -6,7 +6,7 @@ public class StackImpl {
 	
 	void push(int data) {
 		Node temp =  new Node(data);
-		temp.data = data;;
+		temp.data = data;
         temp.next = head;
         head = temp;
 	}
