@@ -5,21 +5,20 @@ import java.util.ArrayDeque;
 public class DoublyEndedQueue {
 	
 	public static void main(String[] args) {
-		// Code goes here
 		
 		ArrayDeque<Integer> ad = new ArrayDeque<>();
+		
 		ad.addFirst(2);
-		ad.addLast(5);
+		ad.addFirst(5);
+		ad.push(3);
 		
-		System.out.println(ad.peekFirst());
+		// Here addFirst and pop will work the same. 
 		
-		System.out.println(ad.peekLast());
 		
-		ad.removeFirst();
-		
-		System.out.println(ad.getFirst());
-		
-		System.out.println(ad.getLast());
+
+		System.out.println(ad.pop());
+		System.out.println(ad.peek());
+
 		
 	}
 

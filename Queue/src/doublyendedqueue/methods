@@ -16,4 +16,13 @@ Two types of methods in the Doubly ended queue.
 	getFirst()
 	addLast()
 	removeLast()
-	getLast()
+	getLast()4
+	
+
+Note ----> If we are using addFirst tehn it'll add the first element at the first and again 
+	if addFirst is used, it will place the second element at first and shifts the previous 
+	element to second place.
+	
+Node ----> addFirst and push works the same. Both the functions add the value at the front of the
+	array deque.
+	
