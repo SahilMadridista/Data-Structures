@@ -1,0 +1,19 @@
+Two types of methods in the Doubly ended queue. 
+
+1) Returns null or false if something is wrong.
+
+	offerFirst(e)
+	pollFirst()
+	peerFirst()
+	offerLast()
+	pollLast()
+	peekLast()
+
+2) Exception throwing methods
+
+	addFirst(e)
+	removeFirst()
+	getFirst()
+	addLast()
+	removeLast()
+	getLast()
