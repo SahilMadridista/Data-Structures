@@ -113,6 +113,12 @@ public class MyLinkedList {
 		}
 	}
 	
+	// Print the head
+	
+	void printHead() {
+		System.out.println(head.data);
+	}
+	
 	// Remove value from specific index
 	
 	void removeFromIndex(int index) {

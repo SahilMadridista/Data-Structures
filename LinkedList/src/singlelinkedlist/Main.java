@@ -1,16 +1,20 @@
 package singlelinkedlist;
 
 public class Main {
+	
+	
 
 	public static void main(String[] args) {
 
 		MyLinkedList list = new MyLinkedList();
 		
-		for(int i = 0;i<10;i++) {
-			list.addData(i);
-		}
 		
+		list.add(0, 100);
+		list.add(0, 12);
 		list.print();
+		System.out.println("");
+		list.printHead();
+		
 		
 	}
 	
