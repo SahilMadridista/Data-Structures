@@ -5,7 +5,6 @@ import java.util.List;
 public class TwoDArray {
 	
 	public static int hourglassSum(List<List<Integer>> arr) {
-	    // Write your code here
 	    
 	    int maximum_hourglass_sum = Integer.MIN_VALUE;
 	        
