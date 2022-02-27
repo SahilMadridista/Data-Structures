@@ -1,5 +1,10 @@
-// In thi algorithm, we compare the adjacent elements and in every iteration or everyphase or every circle of loop, the biggest element will take it's actual place that is at the end. In other words, in every iteration of the for loop, one element gets sorted and in the next iteration we go through the loop till j<arr.length-i-1 //
+// In thi algorithm, we compare the adjacent elements and in every iteration
+//or everyphase or every circle of loop, the biggest element will take 
+// it's actual place that is at the end. In other words, in every iteration of 
+// the for loop, one element gets sorted and in the next iteration we go 
+// through the loop till j<arr.length-i-1 
 
+// Time - O(N^2)
 
 class BubbleSort{
 
