@@ -2,7 +2,7 @@ package easy;
 
 public class RemoveDuplicatesFromSortedArray {
 	
-	static int removeDuplicates(int[] nums) {
+	public int removeDuplicates(int[] nums) {
         int count = 1;
         if(nums.length == 1){
             return 1;
@@ -13,9 +13,10 @@ public class RemoveDuplicatesFromSortedArray {
                 if(nums[i] == nums[j]){
                     j=j+1;
                 }else{
-                    i=j;
-                    j=j+1;
+                    i++;
                     count++;
+                    nums[i] = nums[j];
+                    j=j+1;
                 }
             }
         }
