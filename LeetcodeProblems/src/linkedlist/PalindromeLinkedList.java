@@ -22,6 +22,8 @@ public class PalindromeLinkedList {
         return true;
          
     }
+	
+	// Finding the mid element so that we can reverse the linkedlist after than
    
     static Node middle(Node head){
         Node slow = head;
@@ -33,6 +35,8 @@ public class PalindromeLinkedList {
         
         return slow;
     }
+    
+    // Reversing the linkedlist
     
     static Node reverse(Node head){
         Node prev = null;
