@@ -4,7 +4,6 @@ public class MergeNodesBetweenZeros {
 	
 	public Node mergeNodes(Node head) {
 		
-		
 		Node node = head;
         while(node != null)
         { 
