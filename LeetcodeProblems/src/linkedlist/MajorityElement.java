@@ -2,6 +2,8 @@ package linkedlist;
 
 public class MajorityElement {
 	
+	// Boyre Moore majority element algorithm
+	
 	public int majorityElement(int[] nums) {
         
         int ans_index = 0;
