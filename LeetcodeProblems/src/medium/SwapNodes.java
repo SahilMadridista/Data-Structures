@@ -2,6 +2,13 @@ package medium;
 
 public class SwapNodes {
 	
+	/* 
+	 
+	 Return the head of the linked list after swapping 
+	 the values of the kth node from the beginning and the kth node from the end (the list is 1-indexed).
+	 
+	 */
+	
 	public Node swapNodes(Node head, int k) {
 		
         int size=1;
@@ -33,5 +40,28 @@ public class SwapNodes {
         return head;
         
     }
+	
+	// Alternate solution ( 2 pointer approach )
+	
+	/*
+	
+	ListNode slow = head, fast = head, kthfrombegin=head;
+    int count = 1;
+    while(count < k){
+        fast = fast.next;
+        count++;
+    }
+    kthfrombegin = fast;
+    while(fast != null && fast.next !=null){
+        fast = fast.next;
+        slow = slow.next;
+    }
+    int temp = slow.val;
+    slow.val = kthfrombegin.val;
+    kthfrombegin.val = temp;
+    return head;
+    
+    */
+	
 
 }
