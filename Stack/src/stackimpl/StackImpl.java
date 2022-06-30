@@ -5,10 +5,24 @@ public class StackImpl {
 	Node head;
 	
 	void push(int data) {
-		Node temp =  new Node(data);
-		temp.data = data;
-        temp.next = head;
-        head = temp;
+		
+//		Node temp =  new Node(data);
+//		temp.data = data;
+//        temp.next = head;
+//        head = temp;
+		
+		//  12   1   7   20
+        
+        Node toAdd = new Node(data);
+        
+        if(isEmpty()) {
+        	head=toAdd;
+        	return;
+        }
+        
+        toAdd.next = head;
+        head = toAdd;
+        
 	}
 	
 	int pop() throws Exception {
